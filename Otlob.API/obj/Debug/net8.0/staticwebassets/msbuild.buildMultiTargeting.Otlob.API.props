@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Otlob.API.props" />
-</Project>
