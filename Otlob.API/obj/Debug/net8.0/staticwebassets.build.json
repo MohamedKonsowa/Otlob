@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ZMjl7Lc8olwhC96tynK4Ul5JCmDDQcpMzQ4mPU1fpFk=",
+  "Source": "Otlob.API",
+  "BasePath": "_content/Otlob.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
