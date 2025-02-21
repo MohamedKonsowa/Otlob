@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Projects\\Otlob\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{814C3795-B118-5C8F-C51D-FBD108D89FAC}|Otlob.Core\\Otlob.Core.csproj|d:\\projects\\otlob\\otlob.core\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814C3795-B118-5C8F-C51D-FBD108D89FAC}|Otlob.Core\\Otlob.Core.csproj|solutionrelative:otlob.core\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{281C56F5-342E-2F7C-541B-6067D1A482BD}|Otlob.API\\Otlob.API.csproj|d:\\projects\\otlob\\otlob.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{281C56F5-342E-2F7C-541B-6067D1A482BD}|Otlob.API\\Otlob.API.csproj|solutionrelative:otlob.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -67,6 +71,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\Projects\\Otlob\\Otlob.Core\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Otlob.Core\\Entities\\BaseEntity.cs",
+              "ToolTip": "D:\\Projects\\Otlob\\Otlob.Core\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "Otlob.Core\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T18:47:41.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projects\\Otlob\\Otlob.API\\appsettings.json",
               "RelativeDocumentMoniker": "Otlob.API\\appsettings.json",
@@ -79,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\Otlob\\Otlob.API\\Program.cs",
               "RelativeDocumentMoniker": "Otlob.API\\Program.cs",
@@ -91,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\Projects\\Otlob\\Otlob.Repository\\Repositories\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Otlob.Repository\\Repositories\\UnitOfWork.cs",
@@ -103,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\Projects\\Otlob\\Otlob.Repository\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Otlob.Repository\\Repositories\\GenericRepository.cs",
@@ -115,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Projects\\Otlob\\Otlob.Repository\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Otlob.Repository\\Context\\AppDbContext.cs",
@@ -127,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Otlob.API.csproj",
               "DocumentMoniker": "D:\\Projects\\Otlob\\Otlob.API\\Otlob.API.csproj",
               "RelativeDocumentMoniker": "Otlob.API\\Otlob.API.csproj",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Otlob.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ddfcfc3a77e389d6cb18294e3f01d2bb71d7e29")]
 [assembly: System.Reflection.AssemblyProductAttribute("Otlob.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Otlob.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
