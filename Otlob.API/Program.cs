@@ -1,18 +1,8 @@
-
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Otlob.API.Options;
-using Otlob.Core.Entities.Identity;
-using Otlob.Repository.Context;
-using System.Text;
-
 namespace Otlob.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -23,24 +13,8 @@ namespace Otlob.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            #region Services
-            builder.Services.AddDbContext<AppDbContext>(options =>
-            {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            });
-
-            builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
-            {
-                //options.Password.RequireDigit = true;
-                //options.Password.RequireLowercase = true;
-                //options.Password.RequireUppercase = true;
-                //options.Password.RequireNonAlphanumeric = true;
-                //options.Password.RequiredLength = 8;
-                //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-                //options.Lockout.MaxFailedAccessAttempts = 5;
-                //options.Lockout.AllowedForNewUsers = true;
-                //options.User.RequireUniqueEmail = true;
-            }).AddEntityFrameworkStores<AppDbContext>();
+            builder.Services.AddServices();
+            builder.Services.AddDbContexts(builder);
 
             //Options Pattern
             JwtOptions? jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>() ?? new();
@@ -68,10 +42,25 @@ namespace Otlob.API
                     //}
                 };
             });
-            #endregion
 
             var app = builder.Build();
 
+            using var scope = app.Services.CreateScope();
+            var serviceProvider = scope.ServiceProvider;
+
+            var dbContext = serviceProvider.GetRequiredService<AppDbContext>();
+            var identityContext = serviceProvider.GetRequiredService<IdentityContext>();
+            var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+            try
+            {
+                await dbContext.Database.MigrateAsync();
+                await identityContext.Database.MigrateAsync();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "An error occurred while migrating the database.");
+                Console.WriteLine(ex.Message);
+            }
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
